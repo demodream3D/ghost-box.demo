@@ -27,7 +27,7 @@ def outside_gates ():
 def prompt_outside ():
     prompt_1 = raw_input ('Type a Command: ')
     try:
-        if prompt_1 in ['View Inventory','view inventory','V','v']:
+        if prompt_1 in ['View Inventory','view inventory']:
             print
             inventory ()
         elif prompt_1 == 'JUMP OVER THE FUCKING FENCE!!!':
