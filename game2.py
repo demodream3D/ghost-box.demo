@@ -1002,6 +1002,10 @@ def den_n ():
             print 'The door is locked.'
             print
             den_n ()
+        elif prompt_dn in ['BL','bl']:
+            print '{||||}'
+            print
+            den_n ()
         elif prompt_dn in ['WE','we']:
             print
             crawl_space ()
@@ -1029,6 +1033,10 @@ def den_e ():
         if prompt_de in ['Open Door','open door']:
             print
             print
+        elif prompt_de in ['BL','bl']:
+            print '{||||}'
+            print
+            den_e ()
         elif prompt_de in ['WN','wn']:
             print
             den_ne ()
@@ -1072,6 +1080,10 @@ def den_w ():
         if prompt_dw in ['Examine Area','examine area']:
             print
             print
+        elif prompt_dw in ['BL','bl']:
+            print '{||||}'
+            print
+            den_w ()
         elif prompt_dw in ['WNW','wnw']:
             print
             den_w_nw ()
@@ -1123,6 +1135,10 @@ def den_nw ():
         if prompt_dnw in ['Examine Area','examine area']:
             print
             print
+        elif prompt_dnw in ['BL','bl']:
+            print '{||||}'
+            print
+            den_nw ()
         elif prompt_dnw in ['WNW','wnw']:
             print
             den_w_nw ()
@@ -1159,6 +1175,10 @@ def den_se ():
         elif prompt_dse in ['LOW','low']:
             print
             print
+        elif prompt_dse in ['BL','bl']:
+            print '{||||}'
+            print
+            den_se ()
         elif prompt_dse in ['WN','wn']:
             print
             den_ne ()
@@ -1186,6 +1206,10 @@ def den_sw ():
         elif prompt_dsw in ['LOW','low']:
             print
             print
+        elif prompt_dsw in ['BL','bl']:
+            print '{||||}'
+            print
+            den_sw ()
         elif prompt_dsw in ['WW','ww']:
             print
             den_w_sw ()
@@ -1215,7 +1239,11 @@ def den_w_nw ():
     try:
         if prompt_dw_nw in ['Open Door','open door']:
             print
+            kitchen ()
+        elif prompt_dw_nw in ['BL','bl']:
+            print '{||||}'
             print
+            den_w_nw ()
         elif prompt_dw_nw in ['WSE','wse']:
             print
             den_nw ()
@@ -1234,6 +1262,10 @@ def den_w_sw ():
         if prompt_dw_sw in ['Open Door','open door']:
             print
             print
+        elif prompt_dw_sw in ['BL','bl']:
+            print '{||||}'
+            print
+            den_w_sw ()
         elif prompt_dw_sw in ['WNE','wne']:
             print
             den_w ()
@@ -1251,5 +1283,9 @@ def den_w_sw ():
         print '...'
         print
         den_w_sw ()
+
+def kitchen ():
+    prompt_k = ('You are now in the kitchen. Type a command: ')
+    try:
 
 start ()
