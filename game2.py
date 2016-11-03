@@ -1287,5 +1287,79 @@ def den_w_sw ():
 def kitchen ():
     prompt_k = ('You are now in the kitchen. Type a command: ')
     try:
+        if prompt_k in ['BL','bl']:
+            print '{||||}'
+            print
+            kitchen ()
+        elif prompt_k in ['View Inventory','view inventory']:
+            print
+            inventory_p_k ()
+        elif prompt_k == 'quit()':
+            print
+            quit()
+        elif prompt_k in ['LN','ln']:
+            print ""
+            print
+            kitchen ()
+        elif prompt_k in ['LE','le']:
+            print ""
+            print
+            kitchen ()
+        elif prompt_k in ['LS','ls']:
+            print ""
+            print
+            kitchen ()
+        elif prompt_k in ['LW','lw']:
+            print ""
+            print
+            kitchen ()
+        elif prompt_k in ['LNE','lne']:
+            print ""
+            print
+            kitchen ()
+        elif prompt_k in ['LNW','lnw']:
+            print ""
+            print
+            kitchen ()
+        elif prompt_k in ['LSE','lse']:
+            print ""
+            print
+            kitchen ()
+        elif prompt_k in ['LSW','lsw']:
+            print ""
+            print
+            kitchen ()
+        elif prompt_k in ['WN','wn']:
+            print
+            kitchen_n ()
+        elif prompt_k in ['WE','we']:
+            print
+            kitchen_e ()
+        elif prompt_k in ['WS','ws']:
+            print
+            kitchen_s ()
+        elif prompt_k in ['WW','ww']:
+            print
+            kitchen_w ()
+        elif prompt_k in ['WNE','wne']:
+            print
+            kitchen_ne ()
+        elif prompt_k in ['WNW','wnw']:
+            print
+            kitchen_nw ()
+        elif prompt_k in ['WSE','wse']:
+            print
+            kitchen_se ()
+        elif prompt_k in ['WSW','wsw']:
+            print
+            kitchen_sw ()
+        else:
+            print '...'
+            print
+            kitchen ()
+    except ValueError:
+        print '...'
+        print
+        kitchen ()
 
 start ()
