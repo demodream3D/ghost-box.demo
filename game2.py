@@ -1008,7 +1008,7 @@ def den_n ():
             den_n ()
         elif prompt_dn in ['WE','we']:
             print
-            crawl_space ()
+            den_n_e ()
         elif prompt_dn in ['WW','ww']:
             print
             den_nw ()
@@ -1361,5 +1361,23 @@ def kitchen ():
         print '...'
         print
         kitchen ()
+
+def den_n_e ():
+    prompt_dn_e = ('The crawl space door is cracked. Go through door?[Y/N]: ')
+    try:
+        if prompt_dn_e in ['Y','y']:
+            print
+            crawl_space ()
+        elif prompt_dn_e in ['N','n']:
+            print
+            den_n ()
+        else:
+            print '...'
+            print
+            den_n_e ()
+    except ValueError:
+        print '...'
+        print
+        den_n_e ()
 
 start ()
